@@ -1,26 +1,137 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  void addNumbers(String key) {
+    print('calc key >> ' + key);
+  }
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
+        title: "계산기",
+        home: Scaffold(
+            appBar: AppBar(title: Text("게산하는 앱이에요")), // title Bark
+            body: Column(
+              children: [
+                Row(
+                  children: [
+                    RaisedButton(
+                      child: Text('7'),
+                      onPressed: () {
+                        addNumbers('7');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('8'),
+                      onPressed: () {
+                        addNumbers('8');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('9'),
+                      onPressed: () {
+                        addNumbers('9');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('X'),
+                      onPressed: () {
+                        addNumbers('X');
+                      },
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    RaisedButton(
+                      child: Text('4'),
+                      onPressed: () {
+                        addNumbers('4');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('5'),
+                      onPressed: () {
+                        addNumbers('5');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('6'),
+                      onPressed: () {
+                        addNumbers('6');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('-'),
+                      onPressed: () {
+                        addNumbers('-');
+                      },
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    RaisedButton(
+                      child: Text('1'),
+                      onPressed: () {
+                        addNumbers('1');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('2'),
+                      onPressed: () {
+                        addNumbers('2');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('3'),
+                      onPressed: () {
+                        addNumbers('3');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('-'),
+                      onPressed: () {
+                        addNumbers('-');
+                      },
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    RaisedButton(
+                      child: Text(''),
+                      onPressed: () {
+                        addNumbers('');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('0'),
+                      onPressed: () {
+                        addNumbers('0');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('.'),
+                      onPressed: () {
+                        addNumbers('.');
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('='),
+                      onPressed: () {
+                        addNumbers('=');
+                      },
+                    ),
+                  ],
+                )
+              ],
+            )));
   }
 }
 
